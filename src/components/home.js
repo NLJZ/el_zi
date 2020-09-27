@@ -7,7 +7,7 @@ class Home extends Component {
       <div class="home">
         <div class="splashcontainer">
           <div id="splashimage">
-            <img src="../images/purpleear.jpg" alt="Ear" />
+            <img src="./images/purpleear.jpg" alt="Ear" />
           </div>
 
           <div id="splashmenu">
