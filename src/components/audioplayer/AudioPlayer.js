@@ -17,12 +17,15 @@ function AudioPlayer() {
         playing={playing}
         html5="true"
       />
-      <div className="audioControl" onClick={handlePlay}>
-        Play
-      </div>
-      <div className="audioControl" onClick={handlePause}>
-        Pause
-      </div>
+      {playing === !true ? (
+        <div className="audioControl" onClick={handlePlay}>
+          Play
+        </div>
+      ) : (
+        <div className="audioControl" onClick={handlePause}>
+          Pause
+        </div>
+      )}
     </div>
   );
 }
