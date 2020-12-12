@@ -1,0 +1,12 @@
+.audioPlayer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+  border-top: solid 1px $border-purple;
+  z-index: 5000;
+  .audioControl {
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+}
