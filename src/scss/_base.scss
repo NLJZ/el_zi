@@ -1,0 +1,16 @@
+$dark-purple: #270220;
+$purple-link: #84446b;
+$border-purple: #5e324d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-purple;
+  font-family: "Open Sans", helvetica, sans-serif;
+  position: relative;
+  color: #444;
+}
