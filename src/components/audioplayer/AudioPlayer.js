@@ -1,18 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactHowler from "react-howler";
+import Data from "../../data/data.json";
 
-function AudioPlayer() {
+function AudioPlayer(props) {
+  const [source, setSource] = useState(["", ""]);
+  const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.5);
+  const [durationTime, setDurationTime] = useState(null);
+  const player = useRef();
+  function handleOnLoad() {
+    setLoaded(true);
+    setDurationTime(player.current.duration());
+  }
   function handlePause() {
     setPlaying(false);
   }
   function handlePlay() {
+    handleOnLoad();
     setPlaying(true);
+    console.log(player);
   }
-  const currentAudio = "./audio/helena.mp3";
+  const handleListClick = (file) => {
+    setSource(file);
+  };
+  const playlist = Data.map((item) => {
+    let file = item.file;
+    return (
+      <li key={item.id} onClick={() => handleListClick(file)}>
+        {item.title}
+      </li>
+    );
+  });
   return (
     <div className="audioPlayer">
-      <ReactHowler src={currentAudio} playing={playing} html5="true" />
+      <ReactHowler
+        src={source}
+        playing={playing}
+        html5={true}
+        onLoad={handleOnLoad}
+        ref={player}
+        volume={volume}
+      />
       {playing === !true ? (
         <div className="audioControl" onClick={handlePlay}>
           Play
@@ -22,6 +51,12 @@ function AudioPlayer() {
           Pause
         </div>
       )}
+      <div>
+        <h1>{durationTime}</h1>
+      </div>
+      <div>
+        <ul>{playlist}</ul>
+      </div>
     </div>
   );
 }
