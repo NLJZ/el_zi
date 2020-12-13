@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,14 +14,14 @@ function Home() {
           <h1>ZIESER</h1>
           <ul>
             <li>
-              <a href="work.html">work</a>
+              <Link to="/work">work</Link>
             </li>
-            <li>
+            {/* <li>
               <a href="news.html">news</a>
             </li>
             <li>
               <a href="about.html">about</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

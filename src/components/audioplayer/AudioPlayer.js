@@ -9,14 +9,10 @@ function AudioPlayer() {
   function handlePlay() {
     setPlaying(true);
   }
-  const currentAudio = "./audio/dasichalsdich.mp3";
+  const currentAudio = "./audio/helena.mp3";
   return (
     <div className="audioPlayer">
-      <ReactHowler
-        src="./audio/dasichalsdich.mp3"
-        playing={playing}
-        html5="true"
-      />
+      <ReactHowler src={currentAudio} playing={playing} html5="true" />
       {playing === !true ? (
         <div className="audioControl" onClick={handlePlay}>
           Play
