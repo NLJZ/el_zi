@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
-import audioFile from "./audioFile";
-import playing from "./playing";
+import audio from "./audio/index.js";
 
-const rootReducer = combineReducers({ audioFile, playing });
+const rootReducer = combineReducers({ audio });
 
 export default rootReducer;
