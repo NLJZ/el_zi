@@ -4,13 +4,15 @@
     "title": "Helena",
     "info": "Radio play by Elena Zieser, based on dreams by Hella Vahl, Stereo, 57 minutes 2019.",
     "category": "hörspiel",
-    "file": "./audio/helena.mp3"
+    "file": "./audio/helena.mp3",
+    "html": ""
   },
   {
     "id": "002",
     "title": "Das Ich als Dich",
     "info": "Eine O-Ton Collage von Elena Zieser und Maria Antonia Schmidt, Stereo, 50 Minuten, 2014",
     "category": "hörspiel",
-    "file": "./audio/dasichalsdich.mp3"
+    "file": "./audio/dasichalsdich.mp3",
+    "html": ""
   }
 ]
