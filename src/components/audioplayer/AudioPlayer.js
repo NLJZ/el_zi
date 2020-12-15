@@ -23,6 +23,7 @@ function AudioPlayer(props) {
   }
   const handleListClick = (file) => {
     setSource(file);
+    handlePlay();
   };
   const playlist = Data.map((item) => {
     let file = item.file;
