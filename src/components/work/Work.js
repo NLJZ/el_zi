@@ -2,13 +2,13 @@ import React from "react";
 import WorkNav from "./WorkNav.js";
 import Project from "./Project.js";
 
-function Work() {
-  const projectId = "001";
+function Work(props) {
+  const projectId = props.id;
   return (
     <div className="work">
       <h1>Work Page</h1>
       <WorkNav />
-      <Project projectId={projectId} />
+      {projectId !== undefined ? <Project projectId={projectId} /> : null}
     </div>
   );
 }

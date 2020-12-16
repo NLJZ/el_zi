@@ -5,6 +5,7 @@ import Work from "./components/work/Work";
 import AudioPlayer from "./components/audioplayer/AudioPlayer.js";
 import Navbar from "./components/Navbar.js";
 import "./scss/main.scss";
+import Routes from "./components/Routes";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/work" component={Work} />
+          <Routes />
         </Switch>
+
         <AudioPlayer />
       </Router>
     </div>
