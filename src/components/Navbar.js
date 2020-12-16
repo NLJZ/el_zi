@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 function Navbar() {
   const location = useLocation();
   let path = `${location.pathname}`;
-  if (path !== "/") {
+  if (path === "/") {
+    return null;
+  } else {
     return (
       <motion.nav
         className="navbar"
@@ -23,7 +25,7 @@ function Navbar() {
         </ul>
       </motion.nav>
     );
-  } else return null;
+  }
 }
 
 export default Navbar;

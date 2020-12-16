@@ -5,7 +5,7 @@ function WorkNav() {
   function handleMenuClick(props) {
     console.log(props);
   }
-  const horspiels = Data.filter((project) => project.category == "hörspiel");
+  const horspiels = Data.filter((project) => project.category === "hörspiel");
   const horspielMenu = horspiels.map((item) => {
     return (
       <li key={item.id} onClick={() => handleMenuClick(item.id)}>
