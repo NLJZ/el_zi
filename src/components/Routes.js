@@ -15,13 +15,12 @@ function Routes() {
     projObj.id = project.id;
     return projObj;
   });
-  const MyRoutes = projectRoutes.map(({ path, id }, key) => {
+  const routes = projectRoutes.map(({ path, id }, key) => {
     return (
       <Route key={key} path={"/" + path} component={() => <Work id={id} />} />
     );
   });
-  console.log(MyRoutes);
-  return <>{MyRoutes}</>;
+  return <>{routes}</>;
 }
 
 export default Routes;

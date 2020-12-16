@@ -1,5 +1,6 @@
 import React from "react";
 import Data from "../../data/data.json";
+import { Link } from "react-router-dom";
 
 function WorkNav() {
   function handleMenuClick(props) {
@@ -9,7 +10,9 @@ function WorkNav() {
   const horspielMenu = horspiels.map((item) => {
     return (
       <li key={item.id} onClick={() => handleMenuClick(item.id)}>
-        {item.title}
+        <Link to={item.title.toLowerCase().replace(/\s/g, "")}>
+          {item.title}
+        </Link>
       </li>
     );
   });
