@@ -27,11 +27,12 @@ function AudioPlayer(props) {
   };
   const playlist = Data.map((item) => {
     let file = item.file;
-    return (
+
+    return file !== "" ? (
       <li key={item.id} onClick={() => handleListClick(file)}>
         {item.title}
       </li>
-    );
+    ) : null;
   });
   return (
     <div className="audioPlayer">
@@ -55,7 +56,7 @@ function AudioPlayer(props) {
       <div>
         <h1>{durationTime}</h1>
       </div>
-      <div>
+      <div className="playlist">
         <ul>{playlist}</ul>
       </div>
     </div>

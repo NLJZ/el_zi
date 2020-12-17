@@ -4,9 +4,15 @@
   bottom: 0;
   display: inline-flex;
   border-top: solid 1px $border-purple;
+  background-color: $dark-purple;
   z-index: 5000;
+  color: #ddd;
+  padding: 1rem 0;
   .audioControl {
     cursor: pointer;
     padding: 0.5rem;
+  }
+  div {
+    padding-right: 1rem;
   }
 }

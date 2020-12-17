@@ -10,20 +10,32 @@ $border-purple: #5e324d;
 
 body {
   background-color: $dark-purple;
-  font-family: "Open Sans", helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, Ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
   position: relative;
   color: #444;
-  padding: 0 1rem;
+  padding: 0;
+}
+
+a {
+  font-family: serif;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100vw;
 }
 
 .App {
-  max-width: 1200px;
   display: flex;
   align-items: center;
-  padding: 4rem 0 0 0;
-  justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  background-color: #fff;
   li {
     list-style: none;
   }

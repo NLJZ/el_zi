@@ -5,12 +5,25 @@
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 1200px;
   border-bottom: 1px solid #333;
+  background-color: $dark-purple;
+  z-index: 5000;
+  align-items: center;
+  a {
+    color: #fff;
+    text-decoration: none;
+    h2 {
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+  }
   ul {
     display: inline-flex;
     list-style: none;
+    align-items: center;
     width: 100%;
-    justify-content: space-between;
+    li {
+      padding-right: 1rem;
+    }
   }
 }
