@@ -6,7 +6,6 @@ function Work(props) {
   const projectId = props.id;
   return (
     <div className="work">
-      <h1>Work Page</h1>
       <WorkNav />
       {projectId !== undefined ? <Project projectId={projectId} /> : null}
     </div>

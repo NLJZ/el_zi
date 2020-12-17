@@ -10,7 +10,15 @@ function WorkNav() {
   const horspielMenu = horspiels.map((item) => {
     return (
       <li key={item.id} onClick={() => handleMenuClick(item.id)}>
-        <Link to={item.title.toLowerCase().replace(/\s/g, "")}>
+        <Link
+          to={item.title
+            .toLowerCase()
+            .replace(/\s/g, "")
+            .replace(/\u00e4/g, "ae")
+            .replace(/\u00fc/g, "ue")
+            .replace(/\u00f6/g, "oe")
+            .replace(/\u00df/g, "ss")}
+        >
           {item.title}
         </Link>
       </li>
