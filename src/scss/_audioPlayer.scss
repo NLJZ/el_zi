@@ -16,3 +16,20 @@
     padding-right: 1rem;
   }
 }
+
+.playControl {
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/playbutton.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pauseControl {
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/pausebutton.svg");
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: left -20;
+}

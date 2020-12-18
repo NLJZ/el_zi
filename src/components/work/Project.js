@@ -8,6 +8,9 @@ function Project(props) {
   const project = Data.filter((item) => item.id === projectId)[0];
   const description = parse(project.description);
   const credits = parse(project.credits);
+  const projectInfo = project.info.map((el) => {
+    return <span className="info">{el}</span>;
+  });
   console.log(project);
   const Image = () => {
     if (project.image !== undefined || null) {
@@ -19,8 +22,10 @@ function Project(props) {
   return (
     <div className="project">
       <h1>{project.title}</h1>
-      <Image />
+      {projectInfo}
+      <div className="info"></div>
       {description}
+      <Image />
       {credits}
     </div>
   );

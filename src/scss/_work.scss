@@ -1,31 +1,36 @@
 .work {
   width: 100%;
   display: flex;
-  min-height: 100vh;
-  margin-top: 4rem;
+  height: 100%;
+  margin-top: 5rem;
 }
 
 .work-menu {
   margin-right: 2rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  position: fixed;
   ul {
     margin-bottom: 1rem;
   }
 }
 
 .project {
-  max-width: 30rem;
-  padding: 0px 1rem 0px 0px;
+  max-width: 580px;
   line-height: 1.5;
-  margin: 0 auto 4rem 2rem;
+  margin: 0 auto 6rem auto;
 }
 
 .description {
-  margin: 0;
+  margin: 1rem 0 0 0;
 }
 
-.description a {
+.description a,
+.credits a {
   font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, Ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
+  color: $purple-link;
 }
 
 .description img {
@@ -33,5 +38,14 @@
 }
 
 .underline {
-  font-style: underline;
+  text-decoration: underline;
+}
+
+.info {
+  display: block;
+  font-size: 0.8rem;
+}
+
+.info:last-child {
+  margin-bottom: 1rem;
 }

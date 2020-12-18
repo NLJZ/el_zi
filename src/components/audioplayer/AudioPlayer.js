@@ -46,11 +46,11 @@ function AudioPlayer(props) {
       />
       {playing === !true ? (
         <div className="audioControl" onClick={handlePlay}>
-          Play
+          <div className="playControl"></div>
         </div>
       ) : (
         <div className="audioControl" onClick={handlePause}>
-          Pause
+          <div className="pauseControl"></div>
         </div>
       )}
       <div>
