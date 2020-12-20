@@ -11,6 +11,7 @@ function Project(props) {
   const projectInfo = project.info.map((el) => {
     return <span className="info">{el}</span>;
   });
+  const projectFile = project.file;
   console.log(project);
   const Image = () => {
     if (project.image !== undefined || null) {
@@ -23,6 +24,11 @@ function Project(props) {
     <div className="project">
       <h1>{project.title}</h1>
       {projectInfo}
+      {projectFile !== "" && (
+        <div className="playWrapper">
+          <div className="playControl"></div>
+        </div>
+      )}
       <div className="info"></div>
       {description}
       <Image />
