@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import ReactHowler from "react-howler";
 import Data from "../../data/data.json";
+import { useSelector } from "react-redux";
 
 function AudioPlayer(props) {
-  const [source, setSource] = useState(["", ""]);
+  const source = [useSelector((state) => state.audio.audioFile)];
+  console.log(source);
   const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
@@ -22,7 +24,7 @@ function AudioPlayer(props) {
     console.log(player);
   }
   const handleListClick = (file) => {
-    setSource(file);
+    // setSource(file);
     handlePlay();
   };
   const playlist = Data.map((item) => {

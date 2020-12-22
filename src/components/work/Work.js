@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 function Work(props) {
   const projectId = props.id;
   return (
-    <section className="work">
+    <motion.section className="work">
       <WorkNav />
       {projectId !== undefined ? <Project projectId={projectId} /> : null}
-    </section>
+    </motion.section>
   );
 }
 

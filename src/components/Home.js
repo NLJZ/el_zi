@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <div className="home">
+    <motion.div className="home">
       <div className="splashwrap">
         <div className="splashcontainer">
           <div id="splashimage">
@@ -25,7 +25,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
