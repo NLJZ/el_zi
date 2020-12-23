@@ -1,7 +1,7 @@
-const playing = (state = false, action) => {
+const playing = (state = "", action) => {
   switch (action.type) {
     case "SET_PLAYING":
-      return true;
+      return action.payload;
     default:
       return state;
   }

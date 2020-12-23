@@ -4,3 +4,10 @@ export const setAudioFile = (file) => {
     payload: file,
   };
 };
+
+export const setPlaying = (title) => {
+  return {
+    type: "SET_PLAYING",
+    payload: title,
+  };
+};
