@@ -15,14 +15,15 @@ function AudioPlayer(props) {
   function handleOnLoad() {
     setLoaded(true);
     setDurationTime(player.current.duration());
+    handlePlay();
   }
 
   function handlePause() {
     setPlaying(false);
   }
+
   function handlePlay() {
     setPlaying(true);
-    console.log(player);
   }
 
   return (
