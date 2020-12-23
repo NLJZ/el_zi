@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setAudioFile } from "../../redux/actions/index.js";
 
 function PlayButton(props) {
-  const projectFile = props.projectFile;
+  const projectFile = props.project.file;
   const dispatch = useDispatch();
   function handleClick() {
     dispatch(setAudioFile(projectFile));

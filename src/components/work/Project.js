@@ -28,7 +28,7 @@ function Project(props) {
     <div className="project">
       <h1>{project.title}</h1>
       {projectInfo}
-      {projectFile !== "" && <PlayButton projectFile={projectFile} />}
+      {projectFile !== "" && <PlayButton project={project} />}
       <div className="info"></div>
       {description}
       <Image />

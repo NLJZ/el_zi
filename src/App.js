@@ -7,8 +7,10 @@ import AudioPlayer from "./components/audioplayer/AudioPlayer.js";
 import Navbar from "./components/Navbar.js";
 import "./scss/main.scss";
 import Routes from "./components/Routes";
+import { useSelector } from "react-redux";
 
 function App() {
+  const source = useSelector((state) => state.audio.audioFile);
   return (
     <div className="App">
       <Router>
@@ -20,7 +22,7 @@ function App() {
           <Routes />
         </Switch>
 
-        <AudioPlayer />
+        {source !== null && <AudioPlayer source={source} />}
       </Router>
     </div>
   );

@@ -1,30 +1,37 @@
 import React, { useState, useRef } from "react";
 import ReactHowler from "react-howler";
+import Data from "../../data/data.json";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 function AudioPlayer(props) {
-  const source = [useSelector((state) => state.audio.audioFile)];
-  console.log(source);
+  const source = props.source;
   const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
   const [durationTime, setDurationTime] = useState(null);
   const player = useRef();
+
   function handleOnLoad() {
     setLoaded(true);
     setDurationTime(player.current.duration());
   }
+
   function handlePause() {
     setPlaying(false);
   }
   function handlePlay() {
-    handleOnLoad();
     setPlaying(true);
     console.log(player);
   }
 
   return (
-    <div className="audioPlayer">
+    <motion.div
+      className="audioPlayer"
+      initial={{ y: 200 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <ReactHowler
         src={source}
         playing={playing}
@@ -45,7 +52,7 @@ function AudioPlayer(props) {
       <div>
         <h1>{durationTime}</h1>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
