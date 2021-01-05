@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 function AudioPlayer(props) {
   const source = props.source;
+  const title = props.title;
   const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
@@ -61,9 +62,10 @@ function AudioPlayer(props) {
           <div className="pauseControl"></div>
         </div>
       )}
-      <div>
+      <div className="playinfo">
         <h1>{currentTime}</h1>
         <h1>{durationTime}</h1>
+        <h1>{title}</h1>
       </div>
     </motion.div>
   );

@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 function App() {
   const source = useSelector((state) => state.audio.audioFile);
+  const title = useSelector((state) => state.audio.playing);
   return (
     <div className="App">
       <Router>
@@ -22,7 +23,7 @@ function App() {
           <Routes />
         </Switch>
 
-        {source !== null && <AudioPlayer source={source} />}
+        {source !== null && <AudioPlayer source={source} title={title} />}
       </Router>
     </div>
   );

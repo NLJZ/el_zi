@@ -19,7 +19,7 @@
     "category": "hörspiel",
     "file": "",
     "description": "<div class='description'><p>Tel Aviv, 2048: Amir ist aus dem kriegsgesch&uuml;ttelten Europa in das Land seines Vaters geflohen. Dort, in der jungen Levantinischen Union, wartet er auf Anna, die er auf der Flucht zur&uuml;ckgelassen hat.</p> <p> W&auml;hrend Europa unter rechtem Terror und B&uuml;rgerkrieg zusammenbricht, lebt der Nahe Osten im Frieden. Zehn Jahre fr&uuml;her hat sich dort die Levantinische Union gegr&uuml;ndet, ein Zusammenschluss von Staaten von der arabischen Halbinsel bis zum Schwarzen Meer. Von Dubai &uuml;ber Basra und Jerusalem bis nach Istanbul herrscht Freiz&uuml;gigkeit und Demokratie.</p> <p> Die gef&auml;hrliche Flucht aus Europa hat Amir schon hinter sich – doch angekommen ist er noch lange nicht. Seine Frau Anna hat er im Stich gelassen, seine israelische Geliebte Shiraz will nichts mehr von ihm wissen, ein Job ist nicht in Sicht und die Tiraden seines Cousins Moses sind st&auml;ndiger Beweis daf&uuml;r, dass die alten Wunden im Nahen Osten bei weitem nicht verheilt sind. Als Amir endlich ein Lebenszeichen von Anna erh&auml;lt, sch&ouml;pft er wieder Hoffnung.</p> </div>",
-    "credits": ""
+    "credits": "<div class='credits'> <p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Erol Afsin, Helena Abay, Sammy Ounis, Nagmeh Alaei, Eva Hetkamp, Andreas Schr&ouml;ders<br> <span class='underline'>Autor</span>: Mati Shemoelof<br> <span class='underline'>Musik und Komposition</span>: Niklas Seidl<br> <span class='underline'>Technische Realisation</span>: Henning Schmitz<br> <span class='underline'>Regie</span>: Elena Zieser<br> <span class='underline'>Dramaturgie</span>: Jan Buck<br> <span class='underline'>Redaktion</span>: Isabel Platthaus<br> <p>Eine Produktion des Westdeutschen Rundfunks, 2018.</p> </div>"
   },
   {
     "id": "003",
@@ -33,5 +33,19 @@
     "image": "./images/projectimages/dasichalsdich/longdasichalsdich.jpg",
     "description": "<div class='description'><p>'Das Ich als Ich' spielt mit der Idee, die kollektive Erinnerung einer Gesellschaft zusammen zu f&uuml;hren und durch komplexe Collagentechnik neue Zusammenh&auml;nge und fiktive Geschichten zu montieren.</p><p> Im Fokus stehen die Erinnerungen an die Schulzeit, sowie an erste Grenzerfahrungen, die in der Pubert&auml;t eine pr&auml;gende Rolle einnehmen.</p> <p> Was es bedeutet ein Außenseiter zu sein, muss Fabian, unser Protagonist am eigenen Leib erfahren. Als langhaariger Kotletten-und Schlaghosentr&auml;ger findet sich Fabian schnell unter den Verstoßenen wieder. Als schließlich auch seine Noten in den Keller rutschen, beginnt eine schwierige Phase.</p> <p> Das H&ouml;rst&uuml;ck wurde unter anderem bei Deutschlandfunk Kultur und dem SWR2 gesendet und gewann verschiedene Preise. </p></div>",
     "credits": "<div class='credits'> <p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Fabian Hapich, Natascha Rossi, Anton Weigl, Dennis Dietrich, Lothar Stegmann, Friedrich Koch, Clara Minkwitz, Martin Kallenbach, Erik Vogel, Sebastian van Vugt, Madleen Dannovski, Bernd Forkel, Barbara Lia Schmidt, Marie-Luise Sch&uuml;nemann, Vinzent Lerz, Lukas Erl und Tasma Zieser<br> <span class='underline'>Regie & Schnitt</span>: Elena Zieser und Maria Antonia Schmidt<br> <span class='underline'>Technik und Mischung</span>: Elena Zieser<br> <span class='underline'>Musik und Komposition</span>: Maria Antonia Schmidt<br> <span class='underline'>Gitarre</span>: Jan Frisch</p> <p>Eine Produktion des Experimentellen Radios an der Bauhaus-Universit&auml;t Weimar, 2014.</p> </div>"
+  },
+  {
+    "id": "004",
+    "title": "Trauerspiel",
+    "info": [
+      "Hörspiel von Elena Zieser",
+      "nach einer Adaption des Romans “Der Hund von Ballard” von Ludovic Roubaudi",
+      "Stereo, 47 Minuten, 2013"
+    ],
+    "category": "hörspiel",
+    "file": ["./audio/trauerspiel.wav"],
+    "image": "./images/projectimages/trauerspiel/trauerspiel.jpg",
+    "description": "<div class='description'><p>Erz&auml;hlt wird die Geschichte von Zeltbauern in Paris, die versuchen vom Schatten ins Licht zu kommen. Das Leben hat sie zu groben Kerlen gemacht. Aber dann, nimmt ihr Leben eine Wendung. Sie beginnen, von ihrem eigenen Zirkus zu tr&auml;umen. Am Rande der Gesellschaft wird ein Hund zur Hauptattraktion. Es geht um das, was hinter dem Rampenlicht passiert.</p><p> Es geht um ein Zelt, um den Zirkus und seine Tr&auml;ume.</p> <p> Basierend auf der Vorlage „Der Hund von Ballard“ von Ludovic Roubaudi ist ein Mehrkanal – H&ouml;rspiel entstanden. Neben der Geschichte rund um die Zirkuszeltbauer, steht der akustische Aufbau eines Zirkuszeltes im Vordergrund der Aufnahmen. Die Arbeit existiert in zwei Versionen: Eine 5.1 Mehrkanal Version, die als Installation aufgebaut und aufgef&uuml;hrt werden Kann. Eine Stereoversion, in der die R&auml;umlichkeit des Zirkuszeltes reduziert ist, aber die Geschichte der Protagonisten mehr in den Vordergrund r&uuml;ckt.</p> </div>",
+    "credits": "<div class='credits'> <p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Thomas Herr, Gregor Henze, David Schirmer, Christian Klischat, Wolfgang Kaiser, Sabine Zieser<br> <span class='underline'>Technische Realisation und Aufnahmen</span>: Maximilian Netter<br> <span class='underline'>Musik und Komposition</span>: Niklas Kammermeier<br> <span class='underline'>Regie, Schnitt und Mixing</span>: Elena Zieser<br> <p>Eine Produktion des Experimentellen Radios an der Bauhaus-Universit&auml;t Weimar, 2013.</p> <p>Das St&uuml;ck wurde beim SWR2 ausgestrahlt.</p> <p>PRODUKTIONS FOTOS<br><span class='underline'>Fotos</span>: Elena Zieser</p> </div>"
   }
 ]
