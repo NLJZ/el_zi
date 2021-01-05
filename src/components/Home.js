@@ -8,7 +8,13 @@ function Home() {
       <div className="splashwrap">
         <div className="splashcontainer">
           <div id="splashimage">
-            <img src="./images/purpleear.jpg" alt="Ear" />
+            <motion.img
+              src="./images/purpleear.jpg"
+              alt="Ear"
+              initial={{ x: -10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            />
           </div>
 
           <div id="splashmenu">

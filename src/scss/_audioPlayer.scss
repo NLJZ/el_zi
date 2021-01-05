@@ -2,43 +2,48 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   border-top: solid 1px $border-purple;
   background-color: $dark-purple;
   z-index: 5000;
   color: #ddd;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   .audioControl {
     cursor: pointer;
-    padding: 0.5rem;
-  }
-  div {
-    padding-right: 1rem;
+    padding: 0 0.5rem;
   }
 }
 
+.playerControls {
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
 .playControl {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-image: url("../images/playbutton.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .pauseControl {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-image: url("../images/pausebutton.svg");
-  background-size: 35px 35px;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: left -20;
 }
 
 .playWrapper {
   background-color: $dark-purple;
-  width: 50px;
-  height: 50px;
-  padding: 0.9rem;
+  width: 40px;
+  height: 40px;
+  padding: 0.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +56,22 @@
 }
 
 .playinfo {
-  display: inline-flex;
-  h1 {
-    padding-right: 2rem;
-  }
+  min-width: max-content;
+}
+
+.sliderHolder {
+  width: 100%;
+  height: 1rem;
+  border: 1px solid black;
+  background-color: rgb(216, 149, 216);
+  margin: 0 1rem;
+  display: flex;
+  align-self: center;
+}
+
+.sliderInner {
+  background-color: rgb(75, 158, 247);
+  height: 100%;
+  width: 0;
+  transition: 1s ease-in;
 }

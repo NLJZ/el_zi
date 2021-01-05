@@ -11,9 +11,9 @@ function Navbar() {
     return (
       <motion.nav
         className="navbar"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={{ y: -70, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
         <ul>
           <li>

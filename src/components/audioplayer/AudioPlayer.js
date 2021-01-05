@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactHowler from "react-howler";
+import Slider from "./Slider.js";
 import Data from "../../data/data.json";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
@@ -45,28 +46,32 @@ function AudioPlayer(props) {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <ReactHowler
-        src={source}
-        playing={playing}
-        html5={true}
-        onLoad={handleOnLoad}
-        ref={player}
-        volume={volume}
-      />
-      {playing === !true ? (
-        <div className="audioControl" onClick={handlePlay}>
-          <div className="playControl"></div>
+      <div className="playerControls">
+        <ReactHowler
+          src={source}
+          playing={playing}
+          html5={true}
+          onLoad={handleOnLoad}
+          ref={player}
+          volume={volume}
+          loop="false"
+        />
+        {playing === !true ? (
+          <div className="audioControl" onClick={handlePlay}>
+            <div className="playControl"></div>
+          </div>
+        ) : (
+          <div className="audioControl" onClick={handlePause}>
+            <div className="pauseControl"></div>
+          </div>
+        )}
+        <div className="playinfo">
+          {/* <h1>{currentTime}</h1>
+        <h1>{durationTime}</h1> */}
+          <h2>{title}</h2>
         </div>
-      ) : (
-        <div className="audioControl" onClick={handlePause}>
-          <div className="pauseControl"></div>
-        </div>
-      )}
-      <div className="playinfo">
-        <h1>{currentTime}</h1>
-        <h1>{durationTime}</h1>
-        <h1>{title}</h1>
       </div>
+      <Slider currentTime={currentTime} durationTime={durationTime} />
     </motion.div>
   );
 }

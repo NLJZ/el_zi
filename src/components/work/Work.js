@@ -7,9 +7,14 @@ function Work(props) {
   const projectId = props.id;
   const SplashImage = () => {
     return (
-      <div className="splashImage">
-        <img src="./images/radionobg3.png" alt="slash image of radio" />
-      </div>
+      <motion.div
+        className="splashImage"
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+      >
+        <motion.img src="./images/radionobg3.png" alt="slash image of radio" />
+      </motion.div>
     );
   };
 
