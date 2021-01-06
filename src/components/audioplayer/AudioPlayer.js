@@ -18,6 +18,20 @@ function AudioPlayer(props) {
     setCurrentTime(Math.round(player.current.seek()));
   };
 
+  function timeFormat(time) {
+    let hrs = Math.floor(time / 60 / 60);
+    let mins = Math.floor(time / 60) - hrs * 60;
+    let secs = Math.floor(time % 60);
+
+    let result =
+      // don't need hours
+      // hrs.toString().padStart(2, "0") +
+      // ":" +
+      mins.toString().padStart(2, "0") + ":" + secs.toString().padStart(2, "0");
+
+    return result;
+  }
+
   useEffect(() => {
     setInterval(() => {
       showCurrentTime();
@@ -66,12 +80,14 @@ function AudioPlayer(props) {
           </div>
         )}
         <div className="playinfo">
-          {/* <h1>{currentTime}</h1>
-        <h1>{durationTime}</h1> */}
           <h2>{title}</h2>
+          <div className="time">
+            <h2>{timeFormat(currentTime)}</h2>
+            <Slider currentTime={currentTime} durationTime={durationTime} />
+            <h2>{timeFormat(durationTime)}</h2>
+          </div>
         </div>
       </div>
-      <Slider currentTime={currentTime} durationTime={durationTime} />
     </motion.div>
   );
 }

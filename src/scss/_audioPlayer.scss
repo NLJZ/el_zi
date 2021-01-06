@@ -18,7 +18,6 @@
 .playerControls {
   display: inline-flex;
   width: 100%;
-  margin-bottom: 0.5rem;
   align-items: center;
 }
 
@@ -57,21 +56,32 @@
 
 .playinfo {
   min-width: max-content;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .sliderHolder {
   width: 100%;
   height: 1rem;
   border: 1px solid black;
-  background-color: rgb(216, 149, 216);
+  background-color: #fff;
   margin: 0 1rem;
   display: flex;
   align-self: center;
 }
 
 .sliderInner {
-  background-color: rgb(75, 158, 247);
+  background-color: #555;
   height: 100%;
   width: 0;
-  transition: 1s ease-in;
+  transition: width 0.3 ease-in-out;
+}
+
+.time {
+  display: inline-flex;
+  font-family: monospace;
+  align-items: center;
+  padding-left: 3rem;
+  flex-grow: 1;
 }

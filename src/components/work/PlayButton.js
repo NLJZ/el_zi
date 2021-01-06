@@ -4,7 +4,13 @@ import { setAudioFile, setPlaying } from "../../redux/actions/index.js";
 
 function PlayButton(props) {
   const projectFile = props.project.file;
-  const title = props.project.title;
+  let title;
+  if (!["", undefined, null].includes(props.project.audioTitle)) {
+    title = props.project.audioTitle;
+  } else {
+    title = props.project.title;
+  }
+
   const dispatch = useDispatch();
   function handleClick() {
     dispatch(setAudioFile(projectFile));
