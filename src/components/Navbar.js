@@ -15,19 +15,22 @@ function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <ul>
-          <li>
+        <div className="navcontent">
+          <div>
             <NavLink to="/">
               <h2>Elena Zieser</h2>
             </NavLink>
-          </li>
-          <li>
-            <NavLink to="/work">Work</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-        </ul>
+          </div>
+          <ul>
+            <li>
+              <NavLink to="/work">Work</NavLink>
+            </li>
+            <li>Listen</li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+          </ul>
+        </div>
       </motion.nav>
     );
   }

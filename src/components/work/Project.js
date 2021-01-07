@@ -43,7 +43,9 @@ function Project(props) {
     <div className="project">
       <h1>{project.title}</h1>
       {projectInfo}
-      {projectFile !== ("" || source) && <PlayButton project={project} />}
+      {projectFile !== "" && source !== projectFile ? (
+        <PlayButton project={project} />
+      ) : null}
       <div className="info"></div>
       {description}
       <Image />

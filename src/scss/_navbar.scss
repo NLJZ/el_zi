@@ -1,7 +1,5 @@
 .navbar {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,6 +7,17 @@
   background-color: $dark-purple;
   z-index: 5000;
   align-items: center;
+  div {
+    width: max-content;
+  }
+  .navcontent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
   a {
     color: #fff;
     text-decoration: none;
@@ -21,11 +30,14 @@
     display: inline-flex;
     list-style: none;
     align-items: center;
-    width: 100%;
-    max-width: 1000px;
-    padding: 0 1rem;
+    padding: 0;
     li {
-      padding-right: 1rem;
+      padding-left: 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    li:hover {
+      cursor: pointer;
     }
   }
 }
