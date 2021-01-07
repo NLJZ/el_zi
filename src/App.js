@@ -22,7 +22,6 @@ function App() {
           <Route path="/about" component={About} />
           <Routes />
         </Switch>
-
         {source !== null && <AudioPlayer source={source} title={title} />}
       </Router>
     </div>

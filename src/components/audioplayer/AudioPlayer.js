@@ -53,6 +53,14 @@ function AudioPlayer(props) {
     showCurrentTime();
   }
 
+  function handleSeek(newTime) {
+    player.current.seek(newTime);
+  }
+
+  function handleOnEnd() {
+    setPlaying(false);
+  }
+
   return (
     <motion.div
       className="audioPlayer"
@@ -64,11 +72,12 @@ function AudioPlayer(props) {
         <ReactHowler
           src={source}
           playing={playing}
+          onEnd={handleOnEnd}
           html5={true}
           onLoad={handleOnLoad}
           ref={player}
           volume={volume}
-          loop="false"
+          loop={false}
         />
         {playing === !true ? (
           <div className="audioControl" onClick={handlePlay}>
@@ -83,7 +92,12 @@ function AudioPlayer(props) {
           <h2>{title}</h2>
           <div className="time">
             <h2>{timeFormat(currentTime)}</h2>
-            <Slider currentTime={currentTime} durationTime={durationTime} />
+            <Slider
+              currentTime={currentTime}
+              durationTime={durationTime}
+              handleSeek={handleSeek}
+              setCurrentTime={setCurrentTime}
+            />
             <h2>{timeFormat(durationTime)}</h2>
           </div>
         </div>
