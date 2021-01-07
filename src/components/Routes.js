@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useRouteMatch,
-} from "react-router-dom";
+import { Route } from "react-router-dom";
 import data from "../data/data.json";
 import Work from "../components/work/Work.js";
 

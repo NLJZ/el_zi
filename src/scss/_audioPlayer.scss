@@ -71,6 +71,10 @@
   align-self: center;
 }
 
+.sliderHolder:hover {
+  cursor: pointer;
+}
+
 .sliderInner {
   background-color: #555;
   height: 100%;

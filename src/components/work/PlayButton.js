@@ -13,8 +13,8 @@ function PlayButton(props) {
 
   const dispatch = useDispatch();
   function handleClick() {
-    dispatch(setAudioFile(projectFile));
     dispatch(setPlaying(title));
+    dispatch(setAudioFile(projectFile));
   }
   return (
     <div className="playWrapper">

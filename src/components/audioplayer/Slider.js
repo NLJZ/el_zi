@@ -1,13 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import ReactHowler from "react-howler";
-import Data from "../../data/data.json";
-import { useSelector } from "react-redux";
+
 import { motion } from "framer-motion";
 
 function Slider(props) {
   const ref = useRef(null);
   const [position, setPosition] = useState(null);
-  const [seeking, setSeeking] = useState(false);
   const [seekPosition, setSeekPosition] = useState(null);
   const currentTime = props.currentTime;
   const durationTime = props.durationTime;

@@ -1,19 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactHowler from "react-howler";
 import Slider from "./Slider.js";
-import Data from "../../data/data.json";
-import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
 function AudioPlayer(props) {
   const source = props.source;
   const title = props.title;
-  const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
   const [durationTime, setDurationTime] = useState(null);
   const [currentTime, setCurrentTime] = useState(0.0);
   const player = useRef();
+
   const showCurrentTime = () => {
     setCurrentTime(Math.round(player.current.seek()));
   };
@@ -22,7 +20,6 @@ function AudioPlayer(props) {
     let hrs = Math.floor(time / 60 / 60);
     let mins = Math.floor(time / 60) - hrs * 60;
     let secs = Math.floor(time % 60);
-
     let result =
       // don't need hours
       // hrs.toString().padStart(2, "0") +
@@ -39,7 +36,6 @@ function AudioPlayer(props) {
   });
 
   function handleOnLoad() {
-    setLoaded(true);
     setDurationTime(player.current.duration());
     handlePlay();
   }
@@ -61,6 +57,10 @@ function AudioPlayer(props) {
     setPlaying(false);
   }
 
+  function handleLoadError() {
+    console.log("error loading file");
+  }
+
   return (
     <motion.div
       className="audioPlayer"
@@ -75,6 +75,7 @@ function AudioPlayer(props) {
           onEnd={handleOnEnd}
           html5={true}
           onLoad={handleOnLoad}
+          onLoadError={handleLoadError}
           ref={player}
           volume={volume}
           loop={false}

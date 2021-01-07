@@ -2,10 +2,11 @@ import React from "react";
 import Data from "../../data/data.json";
 import parse from "html-react-parser";
 import PlayButton from "./PlayButton.js";
+import { useSelector } from "react-redux";
 
 function Project(props) {
+  const source = useSelector((state) => state.audio.audioFile);
   const projectId = props.projectId;
-  console.log(projectId);
   const project = Data.filter((item) => item.id === projectId)[0];
   const description = parse(project.description);
   const credits = parse(project.credits);
@@ -24,11 +25,12 @@ function Project(props) {
       return null;
     }
   };
+
   return (
     <div className="project">
       <h1>{project.title}</h1>
       {projectInfo}
-      {projectFile !== "" && <PlayButton project={project} />}
+      {projectFile !== ("" || source) && <PlayButton project={project} />}
       <div className="info"></div>
       {description}
       <Image />
