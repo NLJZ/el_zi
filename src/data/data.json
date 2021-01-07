@@ -50,6 +50,22 @@
     "audioTitle": "",
     "image": "./images/projectimages/trauerspiel/trauerspiel.jpg",
     "description": "<div class='description'><p>Erz&auml;hlt wird die Geschichte von Zeltbauern in Paris, die versuchen vom Schatten ins Licht zu kommen. Das Leben hat sie zu groben Kerlen gemacht. Aber dann, nimmt ihr Leben eine Wendung. Sie beginnen, von ihrem eigenen Zirkus zu tr&auml;umen. Am Rande der Gesellschaft wird ein Hund zur Hauptattraktion. Es geht um das, was hinter dem Rampenlicht passiert.</p><p> Es geht um ein Zelt, um den Zirkus und seine Tr&auml;ume.</p> <p> Basierend auf der Vorlage „Der Hund von Ballard“ von Ludovic Roubaudi ist ein Mehrkanal – H&ouml;rspiel entstanden. Neben der Geschichte rund um die Zirkuszeltbauer, steht der akustische Aufbau eines Zirkuszeltes im Vordergrund der Aufnahmen. Die Arbeit existiert in zwei Versionen: Eine 5.1 Mehrkanal Version, die als Installation aufgebaut und aufgef&uuml;hrt werden Kann. Eine Stereoversion, in der die R&auml;umlichkeit des Zirkuszeltes reduziert ist, aber die Geschichte der Protagonisten mehr in den Vordergrund r&uuml;ckt.</p> </div>",
-    "credits": "<div class='credits'> <p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Thomas Herr, Gregor Henze, David Schirmer, Christian Klischat, Wolfgang Kaiser, Sabine Zieser<br> <span class='underline'>Technische Realisation und Aufnahmen</span>: Maximilian Netter<br> <span class='underline'>Musik und Komposition</span>: Niklas Kammermeier<br> <span class='underline'>Regie, Schnitt und Mixing</span>: Elena Zieser<br> <p>Eine Produktion des Experimentellen Radios an der Bauhaus-Universit&auml;t Weimar, 2013.</p> <p>Das St&uuml;ck wurde beim SWR2 ausgestrahlt.</p> <p>PRODUKTIONS FOTOS<br><span class='underline'>Fotos</span>: Elena Zieser</p> </div>"
+    "credits": "<div class='credits'> <p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Thomas Herr, Gregor Henze, David Schirmer, Christian Klischat, Wolfgang Kaiser, Sabine Zieser<br> <span class='underline'>Technische Realisation und Aufnahmen</span>: Maximilian Netter<br> <span class='underline'>Musik und Komposition</span>: Niklas Kammermeier<br> <span class='underline'>Regie, Schnitt und Mixing</span>: Elena Zieser<br> <p>Eine Produktion des Experimentellen Radios an der Bauhaus-Universit&auml;t Weimar, 2013.</p> <p>Das St&uuml;ck wurde beim SWR2 ausgestrahlt.</p> <p>PRODUKTIONS FOTOS<br><span class='underline'>Fotos</span>: Elena Zieser</p> </div>",
+    "additionalImages": [
+      "./images/projectimages/trauerspiel/trauerspiel2.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel3.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel4.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel5.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel6.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel7.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel8.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel9.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel10.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel11.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel12.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel13.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel14.jpg",
+      "./images/projectimages/trauerspiel/trauerspiel15.jpg"
+    ]
   }
 ]

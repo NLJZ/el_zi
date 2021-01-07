@@ -10,6 +10,7 @@ function Project(props) {
   const project = Data.filter((item) => item.id === projectId)[0];
   const description = parse(project.description);
   const credits = parse(project.credits);
+  const additionalImages = project.additionalImages;
   const projectInfo = project.info.map((el, index) => {
     return (
       <span className="info" key={index}>
@@ -26,6 +27,18 @@ function Project(props) {
     }
   };
 
+  function AdditionalImageRender() {
+    let images;
+    if (additionalImages !== ("" || null || undefined)) {
+      images = additionalImages.map((el, index) => {
+        return <img src={el} alt={project.image + "image"} />;
+      });
+    } else {
+      images = null;
+    }
+    return images;
+  }
+
   return (
     <div className="project">
       <h1>{project.title}</h1>
@@ -35,6 +48,7 @@ function Project(props) {
       {description}
       <Image />
       {credits}
+      <AdditionalImageRender />
     </div>
   );
 }
