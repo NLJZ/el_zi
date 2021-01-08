@@ -90,7 +90,7 @@ function AudioPlayer(props) {
           </div>
         )}
         <div className="playinfo">
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <div className="time">
             <h2>{timeFormat(currentTime)}</h2>
             <Slider
