@@ -11,6 +11,7 @@
     width: max-content;
   }
   .navcontent {
+    position: relative;
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
@@ -38,6 +39,22 @@
     }
     li:hover {
       cursor: pointer;
+    }
+  }
+}
+
+.playlist {
+  position: absolute;
+  top: 2.2rem;
+  right: 1rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 2rem;
+    align-items: flex-start;
+    li {
+      padding: 0;
     }
   }
 }

@@ -11,3 +11,15 @@ export const setPlaying = (title) => {
     payload: title,
   };
 };
+
+export const showPlaylist = () => {
+  return {
+    type: "SHOW_PLAYLIST",
+  };
+};
+
+export const hidePlaylist = () => {
+  return {
+    type: "HIDE_PLAYLIST",
+  };
+};

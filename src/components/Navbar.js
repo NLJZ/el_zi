@@ -1,8 +1,16 @@
 import React from "react";
+import Playlist from "./Playlist.js";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { showPlaylist, hidePlaylist } from "../redux/actions/index.js";
 
 function Navbar() {
+  const playlist = useSelector((state) => state.audio.playlist);
+  const dispatch = useDispatch();
+  function handleClick() {
+    dispatch(showPlaylist());
+  }
   const location = useLocation();
   let path = `${location.pathname}`;
   if (path === "/") {
@@ -25,11 +33,12 @@ function Navbar() {
             <li>
               <NavLink to="/work">Work</NavLink>
             </li>
-            <li>Listen</li>
+            <li onClick={handleClick}>Listen</li>
             <li>
               <NavLink to="/about">About</NavLink>
             </li>
           </ul>
+          {playlist === true ? <Playlist /> : null}
         </div>
       </motion.nav>
     );
