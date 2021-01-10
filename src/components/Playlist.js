@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 
 function PlayList() {
   const dispatch = useDispatch();
+
   function handleClick(file, title) {
     dispatch(setAudioFile(file));
     dispatch(setPlaying(title));
