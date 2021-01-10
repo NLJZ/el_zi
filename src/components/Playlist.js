@@ -6,6 +6,7 @@ import {
   setPlaying,
   hidePlaylist,
 } from "../redux/actions/index.js";
+import { motion } from "framer-motion";
 
 function PlayList() {
   const dispatch = useDispatch();
@@ -28,12 +29,19 @@ function PlayList() {
           {item.title}
         </li>
       );
+    } else {
+      return null;
     }
   });
   return (
-    <div className="playlist">
+    <motion.div
+      className="playlist"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <ul>{list}</ul>
-    </div>
+    </motion.div>
   );
 }
 
