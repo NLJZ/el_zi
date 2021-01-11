@@ -3,6 +3,7 @@ import Data from "../../data/data.json";
 import parse from "html-react-parser";
 import PlayButton from "./PlayButton.js";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 function Project(props) {
   const source = useSelector((state) => state.audio.audioFile);
@@ -31,7 +32,7 @@ function Project(props) {
     let images;
     if (additionalImages !== ("" || null || undefined)) {
       images = additionalImages.map((el, index) => {
-        return <img src={el} alt={project.image + "image"} />;
+        return <img key={index} src={el} alt={project.image + "image"} />;
       });
     } else {
       images = null;

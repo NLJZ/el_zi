@@ -12,14 +12,15 @@ function Work(props) {
       {projectId !== undefined ? (
         <Project projectId={projectId} />
       ) : (
-        <motion.div
-          className="splashImage"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-        >
-          <motion.img src="./images/radionobg3.png" alt="slash radio" />
-        </motion.div>
+        <div className="splashImage">
+          <motion.img
+            initial={{ x: 70, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            src="./images/radionobg3.png"
+            alt="slash radio"
+          />
+        </div>
       )}
     </motion.section>
   );

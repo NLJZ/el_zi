@@ -3,13 +3,10 @@ import Data from "../../data/data.json";
 import { Link } from "react-router-dom";
 
 function WorkNav() {
-  function handleMenuClick(props) {
-    console.log(props);
-  }
   const horspiels = Data.filter((project) => project.category === "hörspiel");
   const horspielMenu = horspiels.map((item) => {
     return (
-      <li key={item.id} onClick={() => handleMenuClick(item.id)}>
+      <li key={item.id}>
         <Link
           to={item.title
             .toLowerCase()
