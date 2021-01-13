@@ -16,6 +16,8 @@ function PlayButton(props) {
     title = props.project.title;
   }
 
+  const isPlaying = source === projectFile;
+
   const dispatch = useDispatch();
   function handleClick() {
     dispatch(setPlaying(title));
@@ -23,9 +25,13 @@ function PlayButton(props) {
     dispatch(showPlayer());
   }
   return (
-    <div className="playWrapper">
-      <div className="playControl" onClick={handleClick}></div>
-    </div>
+    <>
+      {!isPlaying && (
+        <div className="playWrapper" onClick={handleClick}>
+          <div className="playControl"></div>
+        </div>
+      )}
+    </>
   );
 }
 

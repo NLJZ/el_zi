@@ -5,7 +5,6 @@ import PlayButton from "./PlayButton.js";
 import { motion } from "framer-motion";
 
 function Project(props) {
-  console.log("project page");
   const projectId = props.projectId;
   const project = Data.filter((item) => item.id === projectId)[0];
   const description = parse(project.description);

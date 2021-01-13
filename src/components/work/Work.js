@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 function Work(props) {
   const projectId = props.id;
-  console.log("work page render");
   return (
     <section className="work">
       <WorkNav />

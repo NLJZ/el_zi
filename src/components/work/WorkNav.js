@@ -22,7 +22,6 @@ const horspielMenu = horspiels.map((item) => {
 });
 
 function WorkNav() {
-  console.log("work nav render");
   return (
     <div className="work-menu">
       <ul>
