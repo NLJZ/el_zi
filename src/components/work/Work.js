@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 function Work(props) {
   const projectId = props.id;
-
+  console.log("work page render");
   return (
-    <motion.section className="work">
+    <section className="work">
       <WorkNav />
       {projectId !== undefined ? (
         <Project projectId={projectId} />
@@ -22,7 +22,7 @@ function Work(props) {
           />
         </div>
       )}
-    </motion.section>
+    </section>
   );
 }
 

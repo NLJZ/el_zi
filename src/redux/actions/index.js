@@ -23,3 +23,15 @@ export const hidePlaylist = () => {
     type: "HIDE_PLAYLIST",
   };
 };
+
+export const showPlayer = () => {
+  return {
+    type: "SHOW_PLAYER",
+  };
+};
+
+export const hidePlayer = () => {
+  return {
+    type: "HIDE_PLAYER",
+  };
+};

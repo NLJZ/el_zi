@@ -5,15 +5,17 @@ import {
   setAudioFile,
   setPlaying,
   hidePlaylist,
+  showPlayer,
 } from "../redux/actions/index.js";
 import { motion } from "framer-motion";
 
 function PlayList() {
   const dispatch = useDispatch();
-
+  console.log("playlist render");
   function handleClick(file, title) {
     dispatch(setAudioFile(file));
     dispatch(setPlaying(title));
+    dispatch(showPlayer());
     dispatch(hidePlaylist());
   }
   const list = Data.map((item) => {

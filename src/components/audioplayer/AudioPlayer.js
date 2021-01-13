@@ -2,10 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import ReactHowler from "react-howler";
 import Slider from "./Slider.js";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
-function AudioPlayer(props) {
-  const source = props.source;
-  const title = props.title;
+function AudioPlayer() {
+  const source = useSelector((state) => state.audio.audioFile);
+  const title = useSelector((state) => state.audio.playing);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
   const [durationTime, setDurationTime] = useState(null);
@@ -13,7 +14,7 @@ function AudioPlayer(props) {
   const player = useRef();
 
   const showCurrentTime = () => {
-    setCurrentTime(Math.round(player.current.seek()));
+    player && setCurrentTime(Math.round(player.current.seek()));
   };
 
   function timeFormat(time) {
@@ -36,7 +37,7 @@ function AudioPlayer(props) {
   });
 
   function handleOnLoad() {
-    setDurationTime(player.current.duration());
+    player && setDurationTime(player.current.duration());
     handlePlay();
   }
 
@@ -50,7 +51,9 @@ function AudioPlayer(props) {
   }
 
   function handleSeek(newTime) {
-    player.current.seek(newTime);
+    if (player !== undefined && newTime !== undefined) {
+      player.current.seek(newTime);
+    }
   }
 
   function handleOnEnd() {

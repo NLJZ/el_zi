@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Work from "./components/work/Work";
@@ -10,8 +10,7 @@ import Routes from "./components/Routes";
 import { useSelector } from "react-redux";
 
 function App() {
-  const source = useSelector((state) => state.audio.audioFile);
-  const title = useSelector((state) => state.audio.playing);
+  const showAudioPlayer = useSelector((state) => state.audio.player);
   return (
     <div className="App">
       <Router>
@@ -22,7 +21,7 @@ function App() {
           <Route path="/about" component={About} />
           <Routes />
         </Switch>
-        {source !== null && <AudioPlayer source={source} title={title} />}
+        {showAudioPlayer ? <AudioPlayer /> : null}
       </Router>
     </div>
   );

@@ -2,11 +2,10 @@ import React from "react";
 import Data from "../../data/data.json";
 import parse from "html-react-parser";
 import PlayButton from "./PlayButton.js";
-import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
 function Project(props) {
-  const source = useSelector((state) => state.audio.audioFile);
+  console.log("project page");
   const projectId = props.projectId;
   const project = Data.filter((item) => item.id === projectId)[0];
   const description = parse(project.description);
@@ -44,9 +43,7 @@ function Project(props) {
     <div className="project">
       <h1>{project.title}</h1>
       {projectInfo}
-      {projectFile !== "" && source !== projectFile ? (
-        <PlayButton project={project} />
-      ) : null}
+      {projectFile !== "" ? <PlayButton project={project} /> : null}
       <div className="info"></div>
       {description}
       <Image />
