@@ -2,7 +2,7 @@ import React from "react";
 import Data from "../../data/data.json";
 import parse from "html-react-parser";
 import PlayButton from "./PlayButton.js";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Project(props) {
   const projectId = props.projectId;

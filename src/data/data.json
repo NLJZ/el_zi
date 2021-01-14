@@ -67,5 +67,31 @@
       "./images/projectimages/trauerspiel/trauerspiel14.jpg",
       "./images/projectimages/trauerspiel/trauerspiel15.jpg"
     ]
+  },
+  {
+    "id": "005",
+    "title": "Schnittstelle MJ",
+    "info": [
+      "H&ouml;rspiel von Julia Vorkefeld und Elena Zieser",
+      "Stereo, 50 Minuten, 2012"
+    ],
+    "category": "hörspiel",
+    "file": ["./audio/schnittstelle.mp3"],
+    "audioTitle": "",
+    "image": "./images/projectimages/schnittstelle/schnittstelle.jpg",
+    "description": "<div class='description'><p>Be a dancer! Be a singer! Be a star! Be MJ!<br> Come to Spreepark Berlin and dance the electrical Moonwalk.<br>It's your experience!</p><p> Eine atemberaubende Entdeckung nach dem Tod des King of Pop: er war ein Cyborg und er ist auf der Suche nach einem neuen K&ouml;rper, den er beherrschen kann.</p> <p> Anl&auml;sslich der Ausstellungser&ouml;ffnung von “Electrical Magical Moonwalk” kann der gl&uuml;ckliche Gewinner in die bleiche Haut des Pop-Gottes schl&uuml;pfen, oder doch andersherum? Ein d&uuml;steres H&ouml;rspiel &uuml;ber dystopische Zukunftsphantasien, k&uuml;nstliche Intelligenz und das Zwischenmenschliche. </p> </div>",
+    "credits": "<div class='credits'> <p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Thomas Stang, Gabriele Quast, Jana Klinge, Caroline Dietrich, Johannes Schmidt, Petra Hartung, Philipp Oehme, Martin Becker, Maria Antonia Schmidt, Joanna Tschech, Anton Sch&uuml;nemann, Hella Vahl, Christian Hellmann, Sebastian van Vugt und Stefanie Heym.<br> <span class='underline'>Autorin</span>: <a href='https://vimeo.com/user6731118 ' target='new'>Julia Vorkefeld</a><br> <span class='underline'>Musik und Komposition</span>: Kevin Roediger und Ludwig Meckel<br> <span class='underline'>Technische Realisation</span>: Maximilian Netter<br> <span class='underline'>Regie und Schnitt</span>: Elena Zieser<br> <span class='underline'>Sounddesign</span>: Julia Vorkefeld<br> <span class='underline'>Mixing</span>: Elena Zieser<br> <p>Eine Produktion des Experimentellen Radios an der Bauhaus-Universit&auml;t Weimar, 2011/12.</p> <p>Das H&ouml;rspiel wurde beim Leipziger H&ouml;rspielsommer 2013 f&uuml;r 'Beste Regie' ausgezeichnet und bei detektor.fm ausgestrahlt.</p> </p> </div>",
+    "additionalImages": []
+  },
+  {
+    "id": "006",
+    "title": "Tief unten",
+    "info": ["Ein Feature von Elena Zieser", "Stereo, 33 Minuten, 2012"],
+    "category": "hörspiel",
+    "file": ["./audio/tiefunten.mp3"],
+    "audioTitle": "",
+    "image": "./images/projectimages/tiefunten/tiefunten.jpg",
+    "description": "<div class='description'><p>Die Faszination der Menschen f&uuml;r das „unter-Wasser-sein“ mit nur einem Atemzug ist bis heute ungebrochen. Der Extremsport Apnoe Tauchen, auch bekannt als Frei Tauchen verk&ouml;rpert diese Sehnsucht nach der angeblichen oder tats&auml;chlichen Freiheit unter Wasser.</p> <p> Die Weltrekorde liegen bei 172 m. Die Zeit des Luftanhaltens bei f&uuml;nf Minuten.</p> <p> Der Tiefenrausch und die Besonderheit dieser Sportart, steht in Verbindung mit phyischen Grenzen und der Faszination der Tiefe, der Weite in einer Welt, die sich so sehr von unserer Welt unterscheidet. </p></div>",
+    "credits": "<div class='credits'><p>CREDITS<br/> <span class='underline'>Sprecher*innen</span>: Thomas Stang, Gabriele Quast, Jana Klinge, Caroline Dietrich, Johannes Schmidt, Petra Hartung, Philipp Oehme, Martin Becker, Maria Antonia Schmidt, Joanna Tschech, Anton Sch&uuml;nemann, Hella Vahl, Christian Hellmann, Sebastian van Vugt und Stefanie Heym.<br> <span class='underline'>Autorin</span>: <a href='https://vimeo.com/user6731118 ' target='new'>Julia Vorkefeld</a><br> <span class='underline'>Musik und Komposition</span>: Kevin Roediger und Ludwig Meckel<br> <span class='underline'>Technische Realisation</span>: Maximilian Netter<br> <span class='underline'>Regie und Schnitt</span>: Elena Zieser<br> <span class='underline'>Sounddesign</span>: Julia Vorkefeld<br> <span class='underline'>Mixing</span>: Elena Zieser<br> <p>Eine Produktion des Experimentellen Radios an der Bauhaus-Universit&auml;t Weimar, 2011/12.</p> <p>Das H&ouml;rspiel wurde beim Leipziger H&ouml;rspielsommer 2013 f&uuml;r 'Beste Regie' ausgezeichnet und bei detektor.fm ausgestrahlt.</p> </p></div>"
   }
 ]

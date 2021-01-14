@@ -10,7 +10,7 @@ function AudioPlayer() {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
   const [durationTime, setDurationTime] = useState(null);
-  const [currentTime, setCurrentTime] = useState(0.0);
+  // const [currentTime, setCurrentTime] = useState(0.0);
   const player = useRef();
 
   function handleOnLoad() {
@@ -38,6 +38,10 @@ function AudioPlayer() {
 
   function handleLoadError() {
     console.log("error loading file");
+  }
+
+  function handleClose() {
+    console.log("handle close here");
   }
 
   return (
@@ -74,7 +78,6 @@ function AudioPlayer() {
             player={player}
             durationTime={durationTime}
             handleSeek={handleSeek}
-            setCurrentTime={setCurrentTime}
           />
         </div>
       </div>

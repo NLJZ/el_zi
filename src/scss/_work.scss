@@ -20,6 +20,7 @@
       padding-bottom: 0.3rem;
       a {
         text-decoration: none;
+        color: $purple-link;
       }
     }
     li:first-child {
@@ -73,4 +74,8 @@
 
 .info:last-child {
   margin-bottom: 1rem;
+}
+
+.credits {
+  padding-top: 1rem;
 }

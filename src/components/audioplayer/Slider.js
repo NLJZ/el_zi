@@ -17,7 +17,6 @@ function Slider(props) {
   };
   useEffect(() => {
     props.handleSeek(seekPosition);
-    props.setCurrentTime(seekPosition);
   }, [seekPosition]);
 
   useEffect(() => {
