@@ -4,8 +4,7 @@ import { useSelector } from "react-redux";
 
 function AudioContainer() {
   const showAudioPlayer = useSelector((state) => state.audio.player);
-  console.log(showAudioPlayer);
-  return <div>Hi there.</div>;
+  return <>{showAudioPlayer ? <AudioPlayer /> : null}</>;
 }
 
 export default AudioContainer;

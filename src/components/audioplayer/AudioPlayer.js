@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
 function AudioPlayer() {
-  console.log("render audio player");
   const source = useSelector((state) => state.audio.audioFile);
   const title = useSelector((state) => state.audio.playing);
   const [playing, setPlaying] = useState(false);
@@ -13,29 +12,6 @@ function AudioPlayer() {
   const [durationTime, setDurationTime] = useState(null);
   const [currentTime, setCurrentTime] = useState(0.0);
   const player = useRef();
-
-  const showCurrentTime = () => {
-    player && setCurrentTime(Math.round(player.current.seek()));
-  };
-
-  function timeFormat(time) {
-    let hrs = Math.floor(time / 60 / 60);
-    let mins = Math.floor(time / 60) - hrs * 60;
-    let secs = Math.floor(time % 60);
-    let result =
-      // don't need hours
-      // hrs.toString().padStart(2, "0") +
-      // ":" +
-      mins.toString().padStart(2, "0") + ":" + secs.toString().padStart(2, "0");
-
-    return result;
-  }
-
-  useEffect(() => {
-    setInterval(() => {
-      showCurrentTime();
-    }, 300);
-  });
 
   function handleOnLoad() {
     player && setDurationTime(player.current.duration());
@@ -48,7 +24,6 @@ function AudioPlayer() {
 
   function handlePlay() {
     setPlaying(true);
-    showCurrentTime();
   }
 
   function handleSeek(newTime) {
@@ -95,16 +70,12 @@ function AudioPlayer() {
         )}
         <div className="playinfo">
           <h3>{title}</h3>
-          <div className="time">
-            <h2>{timeFormat(currentTime)}</h2>
-            <Slider
-              currentTime={currentTime}
-              durationTime={durationTime}
-              handleSeek={handleSeek}
-              setCurrentTime={setCurrentTime}
-            />
-            <h2>{timeFormat(durationTime)}</h2>
-          </div>
+          <Slider
+            player={player}
+            durationTime={durationTime}
+            handleSeek={handleSeek}
+            setCurrentTime={setCurrentTime}
+          />
         </div>
       </div>
     </motion.div>

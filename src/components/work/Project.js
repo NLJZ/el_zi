@@ -5,8 +5,6 @@ import PlayButton from "./PlayButton.js";
 import { motion } from "framer-motion";
 
 function Project(props) {
-  console.log("projecct pager render");
-  console.log(props);
   const projectId = props.projectId;
   const project = Data.filter((item) => item.id === projectId)[0];
   const description = parse(project.description);
@@ -41,7 +39,12 @@ function Project(props) {
   }
 
   return (
-    <div className="project">
+    <motion.div
+      className="project"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <h1>{project.title}</h1>
       {projectInfo}
       {projectFile !== "" ? <PlayButton project={project} /> : null}
@@ -50,7 +53,7 @@ function Project(props) {
       <Image />
       {credits}
       <AdditionalImageRender />
-    </div>
+    </motion.div>
   );
 }
 
