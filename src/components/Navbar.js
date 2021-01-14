@@ -40,7 +40,7 @@ function Navbar() {
             </div>
             <div className="navElement" ref={ref}>
               <span onClick={handleClick}>Listen</span>{" "}
-              {playlist === true ? <Playlist /> : null}
+              {playlist === true ? <Playlist isVisible /> : null}
             </div>
 
             <div className="navElement">

@@ -1,4 +1,4 @@
-const audioFile = (state = ["./audio/helena.mp3"], action) => {
+const audioFile = (state = [""], action) => {
   switch (action.type) {
     case "SET_AUDIO_FILE":
       return action.payload;

@@ -4,6 +4,7 @@ import Project from "./Project.js";
 import { motion } from "framer-motion";
 
 function Work(props) {
+  console.log("work page render");
   const projectId = props.id;
   return (
     <section className="work">

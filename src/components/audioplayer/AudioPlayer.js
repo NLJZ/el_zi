@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
 function AudioPlayer() {
+  console.log("render audio player");
   const source = useSelector((state) => state.audio.audioFile);
   const title = useSelector((state) => state.audio.playing);
   const [playing, setPlaying] = useState(false);

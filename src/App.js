@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Work from "./components/work/Work";
 import About from "./components/About";
-import AudioPlayer from "./components/audioplayer/AudioPlayer.js";
+import AudioContainer from "./components/audioplayer/AudioPlayer.js";
 import Navbar from "./components/Navbar.js";
 import "./scss/main.scss";
 import Routes from "./components/Routes";
 import { useSelector } from "react-redux";
 
 function App() {
-  const showAudioPlayer = useSelector((state) => state.audio.player);
   return (
     <div className="App">
       <Router>
@@ -21,7 +20,7 @@ function App() {
           <Route path="/about" component={About} />
           <Routes />
         </Switch>
-        {showAudioPlayer ? <AudioPlayer /> : null}
+        <AudioContainer />
       </Router>
     </div>
   );

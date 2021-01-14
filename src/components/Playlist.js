@@ -7,9 +7,10 @@ import {
   hidePlaylist,
   showPlayer,
 } from "../redux/actions/index.js";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-function PlayList() {
+function PlayList(props) {
+  console.log(props);
   const dispatch = useDispatch();
   console.log("playlist render");
   function handleClick(file, title) {
