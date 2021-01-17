@@ -40,9 +40,9 @@ function PlayList(props) {
   return (
     <motion.div
       className="playlist"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      initial={{ height: "0%", opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      transition={{ duration: 0.3 }}
     >
       <ul>{list}</ul>
     </motion.div>

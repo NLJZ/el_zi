@@ -1,5 +1,6 @@
 import React from "react";
 import WorkNav from "./WorkNav.js";
+import WorkDropDown from "./WorkDropDown.js";
 import Project from "./Project.js";
 import { motion } from "framer-motion";
 
@@ -8,6 +9,7 @@ function Work(props) {
   return (
     <section className="work">
       <WorkNav />
+      <WorkDropDown />
       {projectId !== undefined ? (
         <Project projectId={projectId} />
       ) : (
