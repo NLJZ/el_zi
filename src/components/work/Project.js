@@ -2,6 +2,7 @@ import React from "react";
 import Data from "../../data/data.json";
 import parse from "html-react-parser";
 import PlayButton from "./PlayButton.js";
+import WorkDropDown from "./WorkDropDown.js";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Project(props) {
@@ -45,6 +46,7 @@ function Project(props) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
+      <WorkDropDown />
       <h1>{project.title}</h1>
       {projectInfo}
       {projectFile !== "" ? <PlayButton project={project} /> : null}

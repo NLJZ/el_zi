@@ -81,3 +81,37 @@
 .credits {
   padding-top: 1rem;
 }
+
+.dropdown {
+  position: relative;
+  width: max-content;
+  .dropdownlinks {
+    position: absolute;
+    background-color: #fff;
+    border-right: 1px solid $purple-link;
+    border-bottom: 1px solid $purple-link;
+    .work-menu {
+      position: relative;
+      line-height: 1;
+      margin: 0;
+      width: max-content;
+      padding: 0 1rem 1rem 0;
+    }
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 940px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 939px) {
+  aside {
+    display: none;
+  }
+}

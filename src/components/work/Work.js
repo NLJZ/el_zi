@@ -8,12 +8,15 @@ function Work(props) {
   const projectId = props.id;
   return (
     <section className="work">
-      <WorkNav />
-      <WorkDropDown />
+      <aside className="workNav">
+        <WorkNav />
+      </aside>
+
       {projectId !== undefined ? (
         <Project projectId={projectId} />
       ) : (
         <div className="splashImage">
+          <WorkDropDown />
           <motion.img
             initial={{ x: 70, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
