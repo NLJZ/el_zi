@@ -15,7 +15,12 @@ export default function WorkDropDown() {
     <div className="dropdown" onClick={handleClick} ref={ref}>
       <span className="hamburger">menu</span>
       {workMenu === true ? (
-        <motion.div className="dropdownlinks">
+        <motion.div
+          initial={{ height: "0%", opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="dropdownlinks"
+        >
           <WorkNav />
         </motion.div>
       ) : null}
