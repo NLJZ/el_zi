@@ -10,6 +10,7 @@
     "howler": "^2.2.1",
     "html-react-parser": "^1.0.0",
     "node-sass": "^4.14.1",
+    "rc-slider": "^9.7.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-howler": "^5.0.0",

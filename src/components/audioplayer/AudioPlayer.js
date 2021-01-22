@@ -3,6 +3,7 @@ import ReactHowler from "react-howler";
 import Slider from "./Slider.js";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import VolumeControl from "./VolumeControl.js";
 
 function AudioPlayer() {
   const source = useSelector((state) => state.audio.audioFile);
@@ -74,6 +75,7 @@ function AudioPlayer() {
         )}
         <div className="playinfo">
           <h3>{title}</h3>
+          <VolumeControl volume={volume} />
           <Slider
             player={player}
             durationTime={durationTime}
