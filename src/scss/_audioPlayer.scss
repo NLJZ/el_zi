@@ -94,13 +94,55 @@
   flex-grow: 1;
 }
 
+#vol {
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .volumeControl {
   width: 100%;
-  max-width: 4rem;
+  max-width: 6rem;
   height: 1rem;
   border: 1px solid black;
   background-color: #fff;
   margin: 0 1rem;
   display: flex;
   align-self: center;
+}
+
+#volumeInner {
+  background-color: #888;
+}
+
+.volControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    width: max-content;
+  }
+  span {
+    padding: 0.2rem;
+    margin: 0.25rem;
+    font-size: 1rem;
+  }
+
+  span:hover {
+    cursor: pointer;
+  }
+}
+
+.volIcon {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/speaker.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: left -20;
+}
+
+.volIcon:hover {
+  cursor: pointer;
 }

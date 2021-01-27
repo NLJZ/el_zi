@@ -9,7 +9,7 @@ import { showPlaylist, hidePlaylist } from "../redux/actions/index.js";
 function Navbar() {
   const ref = useRef();
   const playlist = useSelector((state) => state.audio.playlist);
-  onClickOutside(ref, () => dispatch(hidePlaylist()));
+  // onClickOutside(ref, () => dispatch(hidePlaylist()));
   const dispatch = useDispatch();
   function handleClick() {
     if (playlist === false) {
@@ -40,7 +40,9 @@ function Navbar() {
             </div>
             <div className="navElement" ref={ref}>
               <span onClick={handleClick}>Listen</span>{" "}
-              {playlist === true ? <Playlist isVisible /> : null}
+              {playlist === true ? (
+                <Playlist navElement={ref} isVisible />
+              ) : null}
             </div>
 
             <div className="navElement">

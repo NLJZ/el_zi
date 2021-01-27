@@ -75,12 +75,12 @@ function AudioPlayer() {
         )}
         <div className="playinfo">
           <h3>{title}</h3>
-          <VolumeControl volume={volume} />
           <Slider
             player={player}
             durationTime={durationTime}
             handleSeek={handleSeek}
           />
+          <VolumeControl volume={volume} />
         </div>
       </div>
     </motion.div>

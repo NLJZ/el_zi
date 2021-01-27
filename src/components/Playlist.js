@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import Data from "../data/data.json";
 import { useDispatch } from "react-redux";
+import onClickOutside from "../hooks/onClickOutside";
 import {
   setAudioFile,
   setPlaying,
@@ -10,6 +11,8 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 
 function PlayList(props) {
+  const ref = useRef();
+  onClickOutside(ref, () => dispatch(hidePlaylist()));
   console.log(props);
   const dispatch = useDispatch();
   console.log("playlist render");
@@ -43,6 +46,7 @@ function PlayList(props) {
       initial={{ height: "0%", opacity: 0 }}
       animate={{ height: "auto", opacity: 1 }}
       transition={{ duration: 0.3 }}
+      ref={ref}
     >
       <ul>{list}</ul>
     </motion.div>
