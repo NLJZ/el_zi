@@ -1,20 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Playlist from "./Playlist.js";
 import onClickOutside from "../hooks/onClickOutside";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { showPlaylist, hidePlaylist } from "../redux/actions/index.js";
+// import { showPlaylist, hidePlaylist } from "../redux/actions/index.js";
 
 function Navbar() {
+  const [playlist, setPlayList] = useState(false);
   const ref = useRef();
-  const playlist = useSelector((state) => state.audio.playlist);
-  // onClickOutside(ref, () => dispatch(hidePlaylist()));
   const dispatch = useDispatch();
   function handleClick() {
-    if (playlist === false) {
-      dispatch(showPlaylist());
-    }
+    !playlist ? setPlayList(true) : setPlayList(false);
   }
   const location = useLocation();
   let path = `${location.pathname}`;
@@ -41,7 +38,7 @@ function Navbar() {
             <div className="navElement" ref={ref}>
               <span onClick={handleClick}>Listen</span>{" "}
               {playlist === true ? (
-                <Playlist navElement={ref} isVisible />
+                <Playlist navElement={ref} setPlayList={setPlayList} />
               ) : null}
             </div>
 

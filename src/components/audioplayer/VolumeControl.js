@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 function VolumeControl(props) {
   const vol = props.volume * 10;
+  const [showVol, setShowVol] = useState(false);
   const [position, setPosition] = useState(null);
   const ref = useRef();
 
@@ -10,9 +11,18 @@ function VolumeControl(props) {
   const handleChange = () => {
     console.log("change");
   };
+  const handleClick = () => {
+    !showVol ? setShowVol(true) : setShowVol(false);
+  };
+
+  const VolControl = () => {
+    return <div>Volume</div>;
+  };
   return (
     <div id="vol">
-      <div className="volIcon"></div>
+      <div className="volIcon" onClick={handleClick}>
+        {showVol ? <VolControl /> : null}
+      </div>
     </div>
   );
 }

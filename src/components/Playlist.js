@@ -5,22 +5,19 @@ import onClickOutside from "../hooks/onClickOutside";
 import {
   setAudioFile,
   setPlaying,
-  hidePlaylist,
   showPlayer,
 } from "../redux/actions/index.js";
 import { motion, AnimatePresence } from "framer-motion";
 
-function PlayList(props) {
-  const ref = useRef();
-  onClickOutside(ref, () => dispatch(hidePlaylist()));
-  console.log(props);
+function PlayList({ setPlayList, navElement }) {
+  const ref = navElement;
+  onClickOutside(ref, () => setPlayList(false));
   const dispatch = useDispatch();
-  console.log("playlist render");
   function handleClick(file, title) {
     dispatch(setAudioFile(file));
     dispatch(setPlaying(title));
     dispatch(showPlayer());
-    dispatch(hidePlaylist());
+    setPlayList(false);
   }
   const list = Data.map((item) => {
     const file = item.file;
@@ -46,7 +43,6 @@ function PlayList(props) {
       initial={{ height: "0%", opacity: 0 }}
       animate={{ height: "auto", opacity: 1 }}
       transition={{ duration: 0.3 }}
-      ref={ref}
     >
       <ul>{list}</ul>
     </motion.div>
