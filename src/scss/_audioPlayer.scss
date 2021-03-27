@@ -4,14 +4,20 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border-top: solid 1px $border-purple;
   background-color: $dark-purple;
   z-index: 5000;
   color: #ddd;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
+  height: 60px;
   .audioControl {
     cursor: pointer;
     padding: 0 0.5rem;
+    transition: all 400ms ease-in-out;
+    :hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -59,6 +65,7 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   h3,
   h2 {
     font-weight: 500;
@@ -99,6 +106,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 60px;
 }
 
 .volumeControl {
@@ -141,8 +150,44 @@
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: left -20;
+  position: relative;
+  transition: all 400ms ease-in-out;
 }
 
 .volIcon:hover {
   cursor: pointer;
+  opacity: 0.7;
+}
+
+.volSlider {
+  position: absolute;
+  bottom: 60px;
+  background-color: $dark-purple;
+  border-bottom: 2px $border-purple solid;
+  width: 40px;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.volSetting {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  &:hover {
+    cursor: pointer;
+    border-top: 1px solid #fff;
+  }
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 5px;
+  z-index: 1;
+  transition: height 300ms ease-in-out;
 }

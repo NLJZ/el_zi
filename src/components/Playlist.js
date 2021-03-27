@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Data from "../data/data.json";
 import { useDispatch } from "react-redux";
 import onClickOutside from "../hooks/onClickOutside";
@@ -7,7 +7,7 @@ import {
   setPlaying,
   showPlayer,
 } from "../redux/actions/index.js";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 function PlayList({ setPlayList, navElement }) {
   const ref = navElement;

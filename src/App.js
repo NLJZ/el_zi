@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Work from "./components/work/Work";
@@ -7,7 +7,6 @@ import AudioContainer from "./components/audioplayer/AudioContainer.js";
 import Navbar from "./components/Navbar.js";
 import "./scss/main.scss";
 import Routes from "./components/Routes";
-import { useSelector } from "react-redux";
 
 function App() {
   return (

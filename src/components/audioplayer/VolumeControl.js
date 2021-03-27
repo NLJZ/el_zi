@@ -1,28 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import VolumeSlider from "./VolumeSlider";
 
-function VolumeControl(props) {
-  const vol = props.volume * 10;
+function VolumeControl({ setVolume, volume }) {
   const [showVol, setShowVol] = useState(false);
-  const [position, setPosition] = useState(null);
-  const ref = useRef();
 
-  let innerWidth = vol * 100 + "%";
-  const handleChange = () => {
-    console.log("change");
-  };
+  console.log(volume);
+
   const handleClick = () => {
     !showVol ? setShowVol(true) : setShowVol(false);
   };
 
-  const VolControl = () => {
-    return <div>Volume</div>;
-  };
   return (
     <div id="vol">
-      <div className="volIcon" onClick={handleClick}>
-        {showVol ? <VolControl /> : null}
-      </div>
+      <div className="volIcon" onClick={handleClick}></div>
+      {showVol ? <VolumeSlider vol={volume} changeVol={setVolume} /> : null}
     </div>
   );
 }

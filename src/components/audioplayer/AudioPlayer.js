@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import ReactHowler from "react-howler";
 import Slider from "./Slider.js";
 import { motion } from "framer-motion";
@@ -41,10 +41,6 @@ function AudioPlayer() {
     console.log("error loading file");
   }
 
-  function handleClose() {
-    console.log("handle close here");
-  }
-
   return (
     <motion.div
       className="audioPlayer"
@@ -80,7 +76,7 @@ function AudioPlayer() {
             durationTime={durationTime}
             handleSeek={handleSeek}
           />
-          <VolumeControl volume={volume} />
+          <VolumeControl volume={volume} setVolume={setVolume} />
         </div>
       </div>
     </motion.div>
